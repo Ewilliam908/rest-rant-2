@@ -1,0 +1,26 @@
+{
+  "name": "rest-rant-2",
+  "version": "1.0.0",
+  "description": "|  Method  |  Path  |  Purpose    |\r ----------- -------- -------------\r | GET |\t/ |\tHome page |",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ewilliam908/rest-rant-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ewilliam908/rest-rant-2/issues"
+  },
+  "homepage": "https://github.com/Ewilliam908/rest-rant-2#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-react-views": "^0.11.0",
+    "mongoose": "^6.2.5"
+  }
+}
