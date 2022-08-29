@@ -1,42 +1,35 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('../default.jsx')
 
-function error404 () {
+function Index (data) {
+  let placesFormatted = data.places.map((place, index) => {
     return (
-      <Def>
-          <main>
-              <h1></h1>
-              <p></p>
-          </main>
-      </Def>
+      <div className='col-sm-6'>
+        <h2>
+          <a href={`/places/${place.id}`}>
+          {place.name}
+          </a>
+        </h2>
+        <p className='text-center'>
+          {place.cuisines}
+        </p>
+        <img src={place.pic} alt={place.name}/>
+        <p className='text-center'>
+          Located in {place.city}, {place.state}
+        </p>
+      </div>
     )
-  }
+  })
+  return (
+    <Def>
+        <main>
+            <h1>PLACES INDEX PAGE</h1>
+            <div className='row'>
+            {placesFormatted}
+            </div>
+        </main>
+    </Def>
+)
+}
 
- module.exports = places 
-
- function index (data) {
-     let placesFOrmatted = date.places.map((place) => {
-         return (
-             <div className="col-sm-6">
-                 <h2>{placeP.name}</h2>
-                 <p className="text-center">
-                     {place.cuisines}
-                </p>
-                <img src={placeP.pic} alt={placeP.name}>
-                <p className="text-center">
-                    located in {place.city}, {place.state}
-                </p>
-             </div>
-         )
-     })
-     return (
-         <Def>
-             <main>
-                 <h1>Places to Rant or Rave About</h1>
-                 <div className="row">
-                 {placesFormatted}
-                 </div>
-             </main>
-         </Def>
-     )
- }
+module.exports = Index
